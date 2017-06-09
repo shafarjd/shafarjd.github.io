@@ -1,0 +1,74 @@
+.oll {
+    
+    width: vw;
+    height: vw;
+    position: relative;
+    border: solid 1px;
+}
+
+
+.edu>a.nubex {
+  color: black;
+  text-decoration: none;
+  outline: none;
+  padding: 1em 4em;
+}
+.edu>div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation {
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    padding-top: 20px;
+}
+
+.navigation>a.nubex {
+    color: black;
+    text-decoration: none;
+    outline: none;
+    background-color: #87ceeb;
+    padding: 0.5em 1em;
+}
+.navigation>a.nubex:hover {
+    background-color: #ff7f50;
+}
+.navigation>a.nubex:active {
+    background-color: #ff4500;
+}
+.info {
+    display: flex;
+}
+
+.info>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+    padding-top: 20px;
+}
+.info>div>a.nubex {
+    color: black;
+    text-decoration: none;
+    outline: none;
+    background-color: #7fffd4;
+    padding: 0.5em 2em;
+}
+.info>div>a.nubex:active {
+    background-color: #ff4500;
+}
+.info>div>a.nubex:hover {
+    background-color: #ff7f50;
+}
+.info>div:nth-child(2) {
+    display: flex;
+    position: relative;
+    
+}
+img {
+    max-width: 100%;
+}
