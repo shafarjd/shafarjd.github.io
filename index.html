@@ -2,80 +2,145 @@
 <html>
     <head>
         <title>мой дом</title>
-        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
           <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Playfair+Display:400,700&subset=latin,cyrillic">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="assets/js/jquery.js" type="text/javascript"></script>
+  <script src="assets/js/mobilyslider.js" type="text/javascript"></script>
+  <script src="assets/js/init.js" type="text/javascript"></script>
     </head>
     <body  style="background-image: url('assets/img/Ttide_logo1.jpg')">
-        <header style="background-image: url('assets/img/003.jpg');
-         background-repeat: no-repeat;
-         background-position: center">
+        <header style="background-color: auto">
             <a class="myhouse" href="index.html">
-                <div>
-                    <img src="assets/img/logo.png"></img>
-                </div>
                 <span>My House</span>
-                <p>Хороший дом нельзя приобрести, <br>Его можно только создать самому.</p>
+                <p>Хороший дом нельзя приобрести, <br>Его можно только построить самому.</p>
             </a>
             <div class="nav-toggle"><span></span></div>
                   <form action="" method="get" id="searchform">
         <input type="text" placeholder="Искать на сайте...">
         <button type="submit"><i class="fa fa-search"></i>найти</button>
       </form>
-            </header>
-        <div class="menu-block">
-    <ul class="vertical-menu">
-        <li class='drop-link'><a href='#' class="nubex">разделы</a>
-                    <ul class="drop-block">
-               <li class="drop-link"><a href="#">участок</a>
-                    <ul class="drop-block">
-                       <li><a href='plot.html'>как выбрать участок</a>
-                       <li><a href='plot.html#MyAnchor1'>документы и регистрация</a>
-                       <li><a href='plot.html#project'>как выбрать проект дома</a>
-                       <li><a href='plot.html#myvideo'>планировка участка</a>
-                   </ul>
-               <li class="drop-link"><a href="#">фундамент</a>
-                    <ul class="drop-block">
-                       <li><a href='#'>виды фундаментов</a>
-                       <li><a href='#'>земляные работы</a>
-                       <li><a href='#'>бетонные работы</a>
-                   </ul>
-               <li class="drop-link"><a href="#">стены</a>
-                    <ul class="drop-block">
-                       <li><a href='#'>виды стеновых материалов</a>
-                       <li><a href='#'>несущие стены</a>
-                       <li><a href='#'>перегородки</a>
-                   </ul>
-               <li class="drop-link"><a href="#">перекрытия</a>
-                    <ul class="drop-block">
-                       <li><a href='#'>виды перекрытий</a>
-                   </ul>               
-               <li class="drop-link"><a href="#">крыша</a>
-                    <ul class="drop-block">
-                       <li><a href='#'>виды кровли</a>
-                       <li><a href='#'>сропильная система</a>
-                       <li><a href='#'>виды кровельных материалов</a>
-                   </ul>               
-    </ul>
-    </li>
-        <li><a href="forum.html" class="nubex">форум</a>
-        <li><a href="#" class="nubex">контакты</a>
-        <li><a href="registration.html" class="nubex">регистрация</a>
-        <li><a href="#" class="nubex">вход</a>
-    </ul>        
-  </div>
 
+            </header>
+            <nav>
+  <ul class="topmenu">
+    <li><a href="" class="active">Разделы</a>
+      <ul class="submenu">
+        <li><a href="" class="submenu-link">участок</a>
+          <ul class="submenu">
+              <li><a href="plot.html">как выбрать участок</a></li>
+              <li><a href="plot.html#MyAnchor1">документы и регистроция</a></li>
+              <li><a href="plot.html#project">как выбрать проект дома</a></li>
+              <li><a href="plot.html#myvideo">планировка участка</a></li>
+          </ul>
+        </li>
+        <li><a href="" class="submenu-link">фундамент</a>
+          <ul class="submenu">
+            <li><a href="foundation.html">виды фундамента</a></li>
+            <li><a href="foundation.html#tera">земляные работы</a></li>
+            <li><a href="foundation.html#mifs">мифы о фундаменте</a></li>
+          </ul>
+        </li>
+        <li><a href="" class="submenu-link">стены</a>
+          <ul class="submenu">
+            <li><a href="walls.html">виды стеновых материалов</a></li>
+          </ul>
+        </li>
+                <li><a href="" class="submenu-link">перекрытия</a>
+          <ul class="submenu">
+            <li><a href="ceiling.html">виды перекрытий</a></li>
+          </ul>
+        </li>
+                <li><a href="" class="submenu-link">крыша</a>
+          <ul class="submenu">
+            <li><a href="roof.html">виды кровли</a></li>
+            <li><a href="roof.html#2roof">стропильная система</a></li>
+            <li><a href="roof.html#3roof">виды кровельных материалов</a></li>
+          </ul>
+        </li>
+                <li><a href="" class="submenu-link">коммуникации</a>
+          <ul class="submenu">
+            <li><a href="communication.html">отопление</a></li>
+            <li><a href="communication.html#voda">водоснабжение</a></li>
+            <li><a href="communication.html#sep">канализация</a></li>
+            <li><a href="communication.html#elik">электричество</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="forum.html">форум</a></li>
+    <li><a href="">контакты</a></li>
+    <li><a href="registration.html">регистрация</a></li>
+    <li><a href="">вход</a></li>
+  </ul>
+</nav>
+<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+<label class="btn-menu" for="hmt">
+  <span class="first"></span>
+  <span class="second"></span>
+  <span class="third"></span>
+</label>
+<ul class="hidden-menu">
+  <ul class="topmenu">
+    <li><a href="" class="active">Разделы</a>
+      <ul class="submenu">
+        <li><a href="" class="submenu-link">участок</a>
+          <ul class="submenu">
+              <li><a href="plot.html">как выбрать участок</a></li>
+              <li><a href="plot.html#MyAnchor1">документы и регистроция</a></li>
+              <li><a href="plot.html#project">как выбрать проект дома</a></li>
+              <li><a href="plot.html#myvideo">планировка участка</a></li>
+          </ul>
+        </li>
+        <li><a href="" class="submenu-link">фундамент</a>
+          <ul class="submenu">
+            <li><a href="foundation.html">виды фундамента</a></li>
+            <li><a href="foundation.html#tera">земляные работы</a></li>
+            <li><a href="foundation.html#mifs">мифы о фундаменте</a></li>
+          </ul>
+        </li>
+        <li><a href="" class="submenu-link">стены</a>
+          <ul class="submenu">
+            <li><a href="walls.html">виды стеновых материалов</a></li>
+          </ul>
+        </li>
+                <li><a href="" class="submenu-link">перекрытия</a>
+          <ul class="submenu">
+            <li><a href="ceiling.html">виды перекрытий</a></li>
+          </ul>
+        </li>
+                <li><a href="" class="submenu-link">крыша</a>
+          <ul class="submenu">
+            <li><a href="roof.html">виды кровли</a></li>
+            <li><a href="roof.html#2roof">стропильная система</a></li>
+            <li><a href="roof.html#3roof">виды кровельных материалов</a></li>
+          </ul>
+        </li>
+                <li><a href="" class="submenu-link">коммуникации</a>
+          <ul class="submenu">
+            <li><a href="communication.html">отопление</a></li>
+            <li><a href="communication.html#voda">водоснабжение</a></li>
+            <li><a href="communication.html#sep">канализация</a></li>
+            <li><a href="communication.html#elik">электричество</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="forum.html">форум</a></li>
+    <li><a href="">контакты</a></li>
+    <li><a href="registration.html">регистрация</a></li>
+    <li><a href="">вход</a></li>
+  </ul>
+</ul>
             <div>
                 <img src="assets/img/1.jpg"></img>
             </div>
-            </div>
-            </div>
             <blockquote>
-  <p><p style="background-color: #F0F8FF">С возрастом желание возвращаться в cвой собственный уголок становится все сильнее и сильнее. Хочется чувствовать себя хозяином в доме, а не гостем на чужих &mdash; пусть и родительских &mdash; квадратных метрах.  Вот тут-то человек и задумывается о покупке или строительстве своего жилья. Для кого-то дилемма  выбора между домом и квартирой не стоит в принципе. А для кого-то &mdash; это целая головная боль и долгие часы мучительных рассуждений.  И дело тут даже не в минусах жизни вне города, а в том, что редкий будущий хозяин загородного частного дома представляет с чего же все-таки начать. И если с покупкой уже готового дома все более-менее понятно, то строить свое семейное гнездо с нуля &mdash; дело весьма не простое.<br>  Этот сайт и задумывался именно для того, чтобы помочь разобраться в нюансах строительства одноквартирного блокированного дома. </p></p>
+  <p style="background-color: #F0F8FF; border-radius: 15px">С возрастом желание возвращаться в cвой собственный уголок становится все сильнее и сильнее. Хочется чувствовать себя хозяином в доме, а не гостем на чужих &mdash; пусть и родительских &mdash; квадратных метрах.  Вот тут-то человек и задумывается о покупке или строительстве своего жилья. Для кого-то дилемма  выбора между домом и квартирой не стоит в принципе. А для кого-то &mdash; это целая головная боль и долгие часы мучительных рассуждений.  И дело тут даже не в минусах жизни вне города, а в том, что редкий будущий хозяин загородного частного дома представляет с чего же все-таки начать. И если с покупкой уже готового дома все более-менее понятно, то строить свое семейное гнездо с нуля &mdash; дело весьма не простое.<br>  Этот сайт и задумывался именно для того, чтобы помочь разобраться в нюансах строительства одноквартирного блокированного дома. </p>
 
 </blockquote>
 <footer>
@@ -90,7 +155,7 @@
       </div>
     </div>
     <div class="footer-col">
-      <a href="mailto:admin@yoursite.ru">Разработчик: shafarjd</a>
+      <a href="">Разработчик: shafarjd</a>
     </div>
   </div>
 </footer>
