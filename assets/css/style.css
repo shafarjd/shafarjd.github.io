@@ -66,42 +66,48 @@ a.myhouse {
 #searchform input:focus {
     outline: 2px solid #EBEBE3;
 }
-.nav-toggle {
+#menu-checkbox {
     display: none;
-    position: relative;
-    float: right;
-    width: 40px;
-    height: 40px;
-    margin-left: 20px;
-    background: #EF5A42;
-    cursor: pointer;
 }
-.nav-toggle span {
-    display: block;
-    position: absolute;
-    top: 19px;
-    left: 8px;
-    right: 8px;
-    height: 2px;
-    background: white;
+.main-menu {
+    display: none;
+    padding: 0;
+    margin: 0;
 }
-.nav-toggle span:before, .nav-toggle span:after {
-    content: "";
-    position: absolute;
+.main-menu li {
+    font-size: 1em;
     display: block;
-    left: 0;
     width: 100%;
-    height: 2px;
-    background: white;
+    text-align: center;
 }
-.nav-toggle span:before {
-    top: -10px;
+.main-menu a {
+    display: block;
+    border-bottom: 1px solid blueviolet;
+    color: black;
+    padding: .5em;
+    text-decoration: none;
 }
-.nav-toggle span:after {
-    bottom: -10px;
+.main-menu a:hover {
+    text-decoration: underline;
 }
-.topmenu.active {
-    max-height: 6000px;
+.toggle-button {
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+}
+.toggle-button:after {
+    content: attr(data-open);
+    display: block;
+    margin: 10px 0;
+    padding: 10px 30px;
+}
+#menu-checkbox:checked + nav[role="navigation"] .main-menu {
+    display: block;
+}
+#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after {
+    content: attr(data-close);
 }
 form {
     position: relative;
@@ -111,7 +117,7 @@ form {
 blockquote {
     margin: 0;
     background: none;
-    padding: 40px;
+    padding: 30px;
     color: #3F484D;
     position: relative;
     font-family: 'Lato', sans-serif;
@@ -148,195 +154,6 @@ blockquote cite {
 iframe {
     max-width: 100%;
 }
-
-.info {
-    display: flex;
-    position: relative;
-    flex-wrap: nowrap;
-    background-color: #E6E6FA;
-}
-nav {
-    background: rgb(255,255,255); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 2%, rgba(255,255,255,1) 2%, rgba(229,229,229,1) 63%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 2%,rgba(255,255,255,1) 2%,rgba(229,229,229,1) 63%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 2%,rgba(255,255,255,1) 2%,rgba(229,229,229,1) 63%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
-    box-shadow: 0 2px 0 0 #ECF1F2;
-    border-top: 1px solid #ECF1F2;
-    text-align: center;
-}
-nav a {
-    text-decoration: none;
-    display: block;
-    transition: .1s linear;
-}
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.topmenu > li {
-    display: inline-block;
-    position: relative;
-    margin-right: -4px;
-}
-.topmenu>li:hover {
-    background-color: #F2F2F9;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.topmenu > li > a {
-    font-weight: bold;
-    padding: 20px 30px;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #1c1c1c;
-}
-.active:after {
-    content: "\f107";
-    font-family: "FontAwesome";
-    color: inherit;
-    margin-left: 10px;
-}
-.topmenu .active, .topmenu > li > a:hover, .submenu li a:hover {
-    color: auto;
-    cursor: pointer;
-}
-.submenu {
-    position: absolute;
-    left: -1px;
-    z-index: 5;
-    width: 240px;
-    border-bottom: 1px solid #ECF1F2;
-    visibility: hidden;
-    opacity: 1;  
-    transform: translateY(10px);
-    transition: .1s ease-in-out;
-    background: #ccf;
-    box-shadow: inset 0 0 8px #fff;
-}
-.submenu li {
-    position: relative;
-}
-.submenu a {
-    background: white;
-    border-top: 1px solid #ECF1F2;
-    border-right: 1px solid #ECF1F2;
-    border-left: 1px solid #ECF1F2;
-    border-radius: 10px
-    color: #1c1c1c;
-    text-align: left;
-    font-size: 14px;
-    letter-spacing: 1px;
-    padding: 10px 20px;
-}
-.submenu .submenu {
-    position: absolute;
-    top: 0;
-    left: calc(100% - 1px);
-    left: -webkit-calc(100% - 1px);
-}
-nav li:hover > .submenu {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0px);
-}
-.info>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: baseline;
-    padding-top: 20px;
-}
-.info>div>a.nubex {
-    color: black;
-    text-decoration: none;
-    text-align: center;
-    outline: none;
-    background-color: #7fffd4;
-    padding: 0.5em 2em;
-    border-radius: 10px;
-    width: 130px;
-}
-.info>div>a.nubex:active {
-    background-color: #ff4500;
-}
-.info>div>a.nubex:hover {
-    background-color: #DDA0DD;
-}
-.info>div:nth-child(3) {
-    display: flex;
-    position: relative;
-}
-div.item {
-    max-width: 100%;
-}
-ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-#breadcrumbs-two{
-    overflow: hidden;
-    width: 100%;
-    background-color: gray;
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    top: 0;
- }
-#breadcrumbs-two li{
-    float: left;
-    margin: 0 .5em 0 1em;
- }
-#breadcrumbs-two a{
-    background: #ddd;
-    padding: .2em 0.5em;
-    float: left;
-    text-decoration: none;
-    color: #444;
-    text-shadow: 0 1px 0 rgba(255,255,255,.5);
-    position: relative;
- }
-#breadcrumbs-two a:hover{
-    background: #99db76;
- }
-#breadcrumbs-two a::before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    margin-top: -1em;
-    border-width: 1em 0 1em;
-    border-style: solid;
-    border-color: #ddd #ddd #ddd transparent;
-    left: -1em;
- }
-#breadcrumbs-two a:hover::before{
-    border-color: #99db76 #99db76 #99db76 transparent;
- }
-#breadcrumbs-two a::after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    margin-top: -1em;
-    border-top: 1em solid transparent;
-    border-bottom: 1em solid transparent;
-    border-left: 1em solid #ddd;
-    right: -1em;
- }
-#breadcrumbs-two a:hover::after{
-    border-left-color: #99db76;
- }
-#breadcrumbs-two .current,
- #breadcrumbs-two .current:hover{
-    font-weight: bold;
-    background: none;
- }
-#breadcrumbs-two .current::after,
- #breadcrumbs-two .current::before{
-    content: normal;
- }
 #content {
     margin: 0 auto;
     width: 100%;
@@ -422,6 +239,7 @@ ul{
 }
 img {
     max-width: 100%;
+    max-height: 100%;
 }
 div.img.right{
     float:right;
@@ -503,73 +321,45 @@ footer {
 .form-row input[type=submit]:hover {
 	background:#286090;
 }
-@media (max-width: 768px) {
-    .nav-toggle {
+@media screen and (min-width: 768px) {
+    .toggle-button {
+    display: none;
+    }
+    .main-menu {
     display: block;
-}
-header {
-    padding: 14px 0;
-}
-body {
+    margin: 0 auto;
+    background-color: #333;
+    height: 30px;
+    }
+    .main-menu li {
+    width: calc(100% / 7);
+    text-align: center;
+    display: inline-block;
+    margin-right: -4px;
+    }
+    .main-menu a {
+    display: inline-block;
+    margin-right: -4px;
+    background-color: #333;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    border-bottom: 0;
+    }
+  }
+@media screen and (max-width: 768px) {
+    body {
     padding: 0;
-}
-.submenu .submenu {
-    top: calc(100% - 1px);
-    top: -webkit-calc(100% - 1px);
-}
-div.img.right:hover {
+    } 
+    div.img.right:hover {
     transform: none;
-}
-div .img {
-    background-position: center;
-}
-.topmenu {
-    background: white;
-    max-height: 0;
-    float: none;
-    position: absolute;
-    overflow: hidden;
-    top: 150px;
-    right: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    z-index: 3;
-}
-.topmenu ul, .topmenu li {
-    display: block;
-    border-bottom: 1px solid #EBEBE3;
-    margin-right: 0;
-}
-div.img.right:hover {
-    transform: none;
-}
-}
-@media (max-width: 480px) {
-    .myhouse {
-    text-align: center;
-    vertical-align: middle;
-}
-#searchform {
-    float: left;
-    margin-left: 0;
-}
-.footer-col {
-    float: none;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
-}
-.footer-col:last-child {
-    text-align: center;
-    margin-bottom: 0;
-}
-}
-<script>
-$('.nav-toggle').on('click', function(){
-  $('.topmenu').toggleClass('active');
-});
-</script>
+    }
+    .form-row {
+        display: none;
+    }
+}  
+  
+
 
 
 

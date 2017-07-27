@@ -1,76 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html leng="en">
     <head>
         <title>мой дом</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
         <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-          <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Playfair+Display:400,700&subset=latin,cyrillic">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
   <script src="assets/js/jquery.js" type="text/javascript"></script>
   <script src="assets/js/mobilyslider.js" type="text/javascript"></script>
   <script src="assets/js/init.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     </head>
     <body  style="background-image: url('assets/img/Ttide_logo1.jpg')">
-        <header style="background-color: auto">
+        <header>
             <a class="myhouse" href="index.html">
                 <span>My House</span>
                 <p>Хороший дом нельзя приобрести, <br>Его можно только построить самому.</p>
             </a>
-            <div class="nav-toggle"><span></span></div>
                   <form action="" method="get" id="searchform">
         <input type="text" placeholder="Искать на сайте...">
         <button type="submit"><i class="fa fa-search"></i>найти</button>
       </form>
-
             </header>
-            <nav>
-  <ul class="topmenu">
-    <li><a class="active">Участок</a>
-      <ul class="submenu">
-        <li><a href="plot.html" class="submenu-link">как выбрать участок</a></li>
-        <li><a href="plot.html#MyAnchor1" class="submenu-link">документы и регистрация</a></li>
-        <li><a href="plot.html#project" class="submenu-link">как выбрать проект дома</a></li>
-        <li><a href="plot.html#myvideo" class="submenu-link">планировка участка</a></li>
-      </ul> 
-    </li>
-    <li><a class="active">фундамент</a>
-        <ul class="submenu">
-          <li><a href="foundation.html" class="submenu-link">виды фундамента</a></li>
-          <li><a href="foundation.html#tera" class="submenu-link">земляные работы</a></li>
-          <li><a href="foundation.html#mifs" class="submenu-link">мифы о фундаменте</a></li>
-        </ul>
-    </li>
-    <li><a class="active">стены</a>
-        <ul class="submenu">
-          <li><a href="walls.html" class="submenu-link">виды стеновых материалов</a></li>
-        </ul>
-    </li>
-        <li><a class="active">коммуникации</a>
-        <ul class="submenu">
-          <li><a href="communication.html" class="submenu-link">отопление</a></li>
-          <li><a href="communication.html#voda" class="submenu-link">водоснабжение</a></li>
-          <li><a href="communication.html#sep" class="submenu-link">канализация</a></li>
-          <li><a href="communication.html#elik" class="submenu-link">электричество</a></li>
-        </ul>
-    </li>
-    <li><a class="active">крыша</a>
-        <ul class="submenu">
-          <li><a href="roof.html" class="submenu-link">виды кровли</a></li>
-          <li><a href="roof.html#2roof" class="submenu-link">стропильная система</a></li>
-          <li><a href="roof.html#3roof" class="submenu-link">виды кровельных материалов</a></li>
-        </ul>
-    </li>
-    <li><a class="active">перекрытия</a>
-        <ul class="submenu">
-            <li><a href="ceiling.html" class="submenu-link">виды перекрытий</a></li>
-        </ul>
-    </li>
-    <li><a href="contacts.html" class="active">контакты</a></li>
-  </ul>
-</nav>
+  <input type="checkbox" id="menu-checkbox" />          
+  <nav role="navigation">
+      <label for="menu-checkbox" class="toggle-button" data-open="Menu" data-close="Close" onclick></label>
+      <ul class="main-menu">
+        <li><a href="plot.html">участок</a></li>
+        <li><a href="foundation.html">фундамент</a></li>
+        <li><a href="walls.html">стены</a></li>
+        <li><a href="ceiling.html">перекрытия</a></li>
+        <li><a href="roof.html">крыша</a></li>
+        <li><a href="communication.html">коммуникации</a></li>
+        <li><a href="contacts.html">контакты</a></li>
+      </ul>
+  </nav>
             <div>
                 <img src="assets/img/1.jpg"></img>
             </div>
@@ -94,13 +57,6 @@
     </div>
   </div>
 </footer>
-<script>
-$('.nav-toggle').on('click', function(){
-$('.topmenu').toggleClass('active');
-});
-</script>
 </body>
-</html>
-    </body>
 </html>
            
